@@ -1,4 +1,36 @@
 $(document).ready(function(){
+    $('.client-carousel').slick({
+        autoplay: true,
+        speed: 1200,
+        slidesToShow: 4,
+            slidesToScroll: 1,
+          easing: 'easeInOutBack',
+           responsive: [
+            {
+              breakpoint: 990,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows:false,
+              }
+            },
+            {
+              breakpoint: 720,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 500,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]       
+    });
     var nav = document.querySelector('.menu');
     var mob =  document.createElement('DIV');
     nav.appendChild(mob);

@@ -5652,9 +5652,10 @@ p {
 .client-carousel {
   overflow: hidden;
 }
-.client-carousel__item {
-  float: left;
-  width: 25%;
+.client-carousel__item img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
 }
 .catalog-up {
   position: relative;
@@ -5853,7 +5854,7 @@ p {
 }
 .product-mini:after {
   content: "";
-  background-image: url(../img/product-hover.png);
+  background-color: rgba(0, 0, 0, 0.65);
   position: absolute;
   top: 0;
   left: 0;
@@ -6136,6 +6137,9 @@ p {
   background-image: url(../img/envelope.svg);
   background-size: 13px;
 }
+.catalog-show {
+  display: none;
+}
 .map-part {
   background-color: #fff;
   padding: 10px;
@@ -6387,9 +6391,6 @@ p {
     padding-left: 112px;
     margin-left: 0px;
   }
-  .our-clients {
-    display: none;
-  }
   .left-category {
     float: right;
     display: none;
@@ -6415,6 +6416,9 @@ p {
   .form {
     width: auto;
     max-width: 500px;
+  }
+  .catalog-show {
+    display: block;
   }
 }
 @media screen and (max-width: 850px) {
@@ -6679,6 +6683,10 @@ p {
     width: 204px;
     float: none;
   }
+  .news-main,
+  .news-up {
+    display: none;
+  }
 }
 @media screen and (max-width: 488px) {
   .logo__img {
@@ -6774,5 +6782,10 @@ p {
   }
   .product-mini {
     margin-right: 15px;
+  }
+  .catalog-show {
+    position: static;
+    display: inline-block;
+    margin-bottom: 12px;
   }
 }
