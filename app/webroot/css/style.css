@@ -5888,6 +5888,8 @@ p {
   position: absolute;
   top: 0px;
   bottom: 0px;
+  left:0;
+  right:0;
   z-index: 2;
 }
 .mini-info__heading {

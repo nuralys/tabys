@@ -6,7 +6,7 @@ $(document).ready(function(){
                 autoplaySpeed: 19000,
                   easing: 'easeInOutBack'       
             });
-                $('.client-carousel').slick({
+        $('.client-carousel').slick({
         autoplay: true,
         speed: 1200,
         slidesToShow: 4,
