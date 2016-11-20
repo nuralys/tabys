@@ -36,18 +36,15 @@
     </ul>
     <div class="catalog__view">
         <ul class="catalog-list">
-            <?php foreach($data['Product'] as $item): ?>
+            <?php foreach($child_cats as $item): ?>
                 <li class="catalog-list__item">
                     <div class="product-mini">
-                        <img class="product-mini__img" src="/img/product/thumbs/<?=$item['img']?>">
+                        <img class="product-mini__img" src="/img/category/<?=$item['Category']['img']?>">
                         <div class="mini-info">
-                            <span class="mini-info__heading"><?=$item['title']?></span>
-                            <span class="mini-info__type"><?=$data['Category']['title']?></span>
-                            <p class="mini-info__text">
-                                <?= $this->Text->truncate(strip_tags($item['body']), 304, array('ellipsis' => '...', 'exact' => true)) ?>
-                            </p>
-                            <?php if($item['body']): ?>
-                            <a class="more mini-info__more" href="/product/<?=$item['id']?>">Узнать подробнее о товаре</a><?php endif ?>
+                            <span class="mini-info__heading"><?=$item['Category']['title']?></span>
+                           
+                            
+                            <a class="more mini-info__more" href="/category/<?=$item['Category']['alias']?>">Узнать подробнее о товаре</a>
                         </div>  
                     </div>
                 </li>
