@@ -248,16 +248,5 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery-3.0.0.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
         <script type="text/javascript" src="js/slick.min.js"></script>
-        <script type="text/javascript">
-        $(document).ready(function(){
-                $('.slider').slick({
-              autoplay: true,
-                arrows: true,
-                speed: 1200,
-                autoplaySpeed: 19000,
-                  easing: 'easeInOutBack'       
-            });
-        });
-      </script>
     </body>
 </html>

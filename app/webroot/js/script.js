@@ -1,5 +1,12 @@
 $(document).ready(function(){
-    $('.client-carousel').slick({
+      $('.slider').slick({
+              autoplay: true,
+                arrows: true,
+                speed: 1200,
+                autoplaySpeed: 19000,
+                  easing: 'easeInOutBack'       
+            });
+                $('.client-carousel').slick({
         autoplay: true,
         speed: 1200,
         slidesToShow: 4,
