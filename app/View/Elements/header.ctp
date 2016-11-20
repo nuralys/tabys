@@ -18,13 +18,13 @@
             </div>
             <ul class="social">
                 <li class="social__item">
-                    <a class="social-link social-link--vk" href="#"></a>
+                    <a class="social-link vk" href="#"></a>
                 </li>
                 <li class="social__item">
-                    <a class="social-link social-link--facebook" href="#"></a>
+                    <a class="social-link facebook" href="#"></a>
                 </li>
                 <li class="social__item">
-                    <a class="social-link social-link--instagram"  href="#"></a>
+                    <a class="social-link instagram"  href="#"></a>
                 </li>
             </ul>
         </div>

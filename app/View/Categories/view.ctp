@@ -6,6 +6,7 @@
         <li class="breadcrumbs__li">Продукция</li>
     </ul>
     <h1 class="up-heading up-heading--content">Продукция</h1>
+    
 </div>  
 <div class="catalog">
     <ul class="left-category">

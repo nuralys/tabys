@@ -6,6 +6,7 @@
               <li class="breadcrumbs__li">Продукция</li>
             </ul>
             <h1 class="up-heading up-heading--content">Продукция</h1>
+            <div class="catalog-show">Каталог</div> 
           </div>  
           <div class="catalog">
             <ul class="left-category">
@@ -13,7 +14,7 @@
                 <a class="category-option category-option--cab" href="/category/dushevye-kabiny">Душевые кабины</a>
               </li>
               <li class="left-category__item">
-                <a class="category-option category-option--forbath" href="/category/mebel-dlya-vannoy-komnaty">Мебель для ванной комнаты</a>
+              <a class="category-option category-option--forbath" href="/category/mebel-dlya-vannoy-komnaty">Мебель для ванной <span class="k">комнаты</span></a>
               </li>
               <li class="left-category__item">
                 <a class="category-option category-option--sanfoyas" href="/category/sanfayans">Санфаянс</a>
