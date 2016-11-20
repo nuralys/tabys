@@ -25,12 +25,24 @@ class CategoriesController extends AppController{
 
 	public function view($alias){
 		$data = $this->Category->findByAlias($alias);
+		
 		if (!$data) {
 			throw new NotFounddException('Такой категории не существует');
 		}
-		// debug($data);
-		// die;
 		return $this->set(compact('data'));
+	}
+
+	public function cats($alias){
+		$data = $this->Category->findByAlias($alias);
+		$child_cats = $this->Category->find('all', array(
+			'conditions' => array('Category.parent_id' => $data['Category']['id'])
+		));
+		// debug($child_cats);
+		// die;
+		if (!$child_cats) {
+			throw new NotFounddException('Такой категории не существует');
+		}
+		return $this->set(compact('child_cats'));
 	}
 
 	public function admin_add(){

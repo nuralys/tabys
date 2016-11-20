@@ -5,36 +5,8 @@
 	</div>
 <?php 
 
-echo $this->Form->create('Product', array('type' => 'file'));
-echo $this->Form->input('title', array('label' => 'Название:'));?>
-<div id="cropContainerEyecandy"></div>
- <link href="/css/main.css" rel="stylesheet">
-    <link href="/css/croppic.css" rel="stylesheet">
-   	<script src="/js/croppic.min.js"></script>
-    <script>
-		var croppicContainerEyecandyOptions = {
-				uploadUrl:'/ajax/img_save_to_file.php',
-				cropUrl:'/ajax/img_crop_to_file.php',
-				imgEyecandy:false,				
-				loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
-				onBeforeImgUpload: function(){ console.log('onBeforeImgUpload') },
-				onAfterImgUpload: function(data){ console.info(data);},
-				onImgDrag: function(){ console.log('onImgDrag') },
-				onImgZoom: function(){ console.log('onImgZoom') },
-				onBeforeImgCrop: function(){ console.log('onBeforeImgCrop') },
-				onAfterImgCrop:function(data){ console.info(data.url); console.info(data.urlsource);				
-				$('.imgcrop').val(data.url);
-				$('.imgsource').val(data.urlsource);
-				},
-				onReset:function(){ console.log('onReset') },
-				onError:function(errormessage){ console.log('onError:'+errormessage) }
-		}
-		var cropContainerEyecandy = new Croppic('cropContainerEyecandy', croppicContainerEyecandyOptions);
+echo $this->Form->create('Product', array('type' => 'file'));?>
 
-	</script>
-<input type="text" name="data[Product][imgsource]" class="imgsource" value="" />
-<input type="text" name="data[Product][imgcrop]" class="imgcrop" value="" />
-</div>
 <div class="input select">
 <label for="ProductCategoryId">Категории:</label>
 	<select required name="data[Product][category_id]" id="ProductCategoryId">
@@ -44,24 +16,21 @@ echo $this->Form->input('title', array('label' => 'Название:'));?>
 		<?php endforeach ?>
 	</select>
 </div>
-<div class="input select">
-<label for="ProductParentId">Родительский продукт:</label>
-	<select name="data[Product][parent_id]" id="ProductParentId">
-		<option value="">Выберите продукт</option>
-		<option value="0">----</option>
-		<?php foreach($products as $key => $value): ?>
-			<option value="<?=$key?>" <?= ($data['Product']['parent_id'] == $key)? 'selected' : '' ?>><?=$value?></option>
-		<?php endforeach ?>
-	</select>
-</div>
 <?php
-echo $this->Form->input('mini_img', array('label' => 'мини изображение:', 'type' => 'file'));
-echo $this->Form->input('size', array('label' => 'Размеры:'));
-echo $this->Form->input('blade', array('label' => 'Лезвие:'));
-echo $this->Form->input('coating', array('label' => 'Покрытие:'));
-echo $this->Form->input('characteristics', array('label' => 'Характеристики:'));
-echo $this->Form->input('material', array('label' => 'Материал:'));
-echo $this->Form->input('hardness', array('label' => 'Твердость:'));
+echo $this->Form->input('body', array('label' => 'Текст', 'id' => 'editor'));
+echo $this->Form->input('model', array('label' => 'Модель'));
+echo $this->Form->input('manufaturer', array('label' => 'Производитель'));
+echo $this->Form->input('size', array('label' => 'Размер'));
+echo $this->Form->input('product_type', array('label' => 'Тип продукции'));
+echo $this->Form->input('cover_type', array('label' => 'Покрытие'));
+echo $this->Form->input('color', array('label' => 'Цвет'));
+echo $this->Form->input('thickness', array('label' => 'Толщина'));
+echo $this->Form->input('specification', array('label' => 'Спецификация', 'id' => 'editor2'));
+echo $this->Form->input('advantages', array('label' => 'Преимущества', 'id' => 'editor3'));
+echo $this->Form->input('img', array('label' => 'Изображение:', 'type' => 'file'));
+echo $this->Form->input('published', array('type'=>'checkbox','hiddenField' => false, 'label'=>'Опубликован'));
+echo $this->Form->input('keywords', array('label' => 'Ключевые слова', 'placeholder' => 'Ключевые слова '));
+echo $this->Form->input('description', array('label' => 'Описание', 'placeholder' => 'Описание '));
 ?>
 <div class="edit_bot">
 	<div class="bot_r">
